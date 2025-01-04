@@ -73,7 +73,7 @@ section{
 .main-home{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/banner.png);
+    background-image: url(./images/tonny.jpg);
     background-position: center;
     background-size: cover;
     display: grid;
@@ -163,10 +163,21 @@ header.sticky{
     color: #ee1c47;
 }
 
-.products{
+.products {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.price {
+    margin-top: auto; /* Pushes the price div to the bottom */
 }
 
 /* mobile view */
@@ -178,9 +189,13 @@ header.sticky{
     }
   }
 
-.row{
+  .row {
     position: relative;
     transition: all .40s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .row img{
@@ -192,6 +207,12 @@ header.sticky{
 .row img:hover{
     transform: scale(0.9);
 }
+
+.product-image {
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
 
 .product-text h5{
     position: absolute;
